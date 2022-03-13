@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>EricRao SMP | 首页</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+	<link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<!-- imlazy api -->
+	<script src="js/jquery.min.js"></script>
+	<script>
+         var settings = {
+           "async": true,
+           "crossDomain": true,
+           "url": "https://api.imlazy.ink/mcapi/?name=&host=mc.ericrao.icu&type=json",
+           "method": "GET"
+         }
+
+         $.ajax(settings).done(function (response) {
+           console.log(response);
+
+					 var content = response.players_online;
+					 $("#online").append(content);
+         });
+  </script>
+	<!-- EricRao SMP api -->
+	<script src="js/jquery.min.js"></script>
+	<script>
+         var settings = {
+           "async": true,
+           "crossDomain": true,
+           "url": "https://checkupd.rth1.me/api.json",
+           "method": "GET"
+         }
+
+         $.ajax(settings).done(function (response) {
+           console.log(response);
+
+					 var content = response.version;
+					 $("#version").append(content);
+         });
+  </script>
+</head>
+
+<body>
+
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" style="border-radius: 20px;"></a>
+					<a class="navbar-brand logo_inner_page" href="index.html"><img src="img/logo2.png" alt="" style="border-radius: 20px;"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav">
+							<li class="nav-item active"><a class="nav-link" href="index.html">首页</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
+
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6">
+						<div class="banner_content">
+							<h3>欢迎！</h3>
+							<h1 class="text-uppercase">EricRao SMP</h1>
+							<h5 class="text-uppercase">一个生存社交服务器</h5>
+							<div class="social_icons my-5">
+								<a href="http://map.ericrao.icu"><i class="ti-map-alt"></i></a>
+								<a href="https://discord.gg/QKanqu9v6S"><i class="ti-comments"></i></a>
+								<a href="https://docs.ericrao.icu"><i class="ti-clipboard"></i></a>
+								<a href="http://stats.ericrao.icu"><i class="ti-stats-up"></i></a>
+								<a href="http://links.ericrao.icu/"><i class="ti-link"></i></a>
+							</div>
+							<a class="primary_btn" href="https://docs.ericrao.icu/"><span>加入我们</span></a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="home_right_img">
+							<img class="img-fluid" src="img/banner/home-right.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
+
+	<!--================ Start Statistics Area =================-->
+	<section class="statistics_area">
+		<div class="container">
+			<div class="row justify-content-lg-start justify-content-center">
+				<div class="col-lg-2 col-md-3">
+					<div class="statistics_item">
+						<h3><span class="counter" id="online"></span></h3>
+						<p>在线玩家</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3">
+					<div class="statistics_item">
+						<h3><span class="counter">1.17.1</span></h3>
+						<p>游戏版本</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-3">
+					<div class="statistics_item">
+						<h3><span class="counter" id="version"></span></h3>
+						<p>最新启动器版本</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Statistics Area =================-->
+
+	<!--================ Start About Us Area =================-->
+	<section class="about_area section_gap">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-5">
+						<img class="" src="img/about-us.png" alt="" width="256" height="256">
+				</div>
+
+				<div class="offset-lg-1 col-lg-5">
+					<div class="main_title text-left">
+						<p class="top_text">关于我们<span></span></p>
+						<h2>
+							EricRao SMP
+						</h2>
+						<p>
+							EricRao SMP是一个于2021年8月13日开放游玩的生存社交服务器，我们拥有许多自定义内容以及许多插件，我们包含了粘液科技等著名插件。<br>
+							我们拥有领地、经济、商店等多项系统，我们拥有多个世界，包括了一个小镇社区，我们还拥有自行编写的数据包给玩家带来更好的体验。<br>
+							我们服务器位于境外，但拥有CN2线路中转，Minecraft拥有12GB运行内存及4核心CPU运行，保证游玩流畅不卡顿。
+						</p>
+						<a class="primary_btn" href="https://docs.ericrao.icu/"><span>加入我们</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End About Us Area =================-->
+
+	<!--================ Start Features Area =================-->
+	<section class="services_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p class="top_text">我们的特色<span></span></p>
+						<h2>我们服务器具有的特色内容</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+					<div class="service_item">
+						<img src="img/services/pen.svg" alt="">
+						<h4>自定义内容</h4>
+						<p>由EricRao_编写的数据包与Oraxen插件<br>服务器拥有了更多有趣的自定义内容</p>
+						<a href="https://docs.ericrao.icu/xin-zeng-nei-rong/" class="primary_btn2 mt-35">了解更多</a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+					<div class="service_item">
+						<img src="img/services/map.svg" alt="">
+						<h4>服务器地图</h4>
+						<p>我们搭载了Dynmap地图<br>让您在网页中浏览游戏地图</p>
+						<a href="http://map.ericrao.icu" class="primary_btn2 mt-35">了解更多</a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+					<div class="service_item">
+						<img src="img/services/discord.svg" alt="">
+						<h4>Discord聊天室</h4>
+						<p>玩家可以在游戏内与游戏外和玩家之间交流，玩家数据也可以在聊天室中轻松的查询</p>
+						<a href="https://discord.gg/QKanqu9v6S/" class="primary_btn2 mt-35">了解更多</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+
+  <!--================ Start Testimonial Area =================-->
+	<section class="testimonial_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p class="top_text">评价<span></span></p>
+						<h2>玩家对我们的评价</h2>
+					</div>
+				</div>
+      </div>
+
+      <div class="owl-carousel owl-theme testimonial-slider ">
+        <div class="testimonial-item">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="testi-img mb-4 mb-lg-0">
+                <img src="img/TOMBSTONE.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="testi-right">
+                <h4>TOMBSTONE_NO_1</h4>
+                <p><small>服务器老玩家</small></p>
+
+                <p>感觉这个服务器延迟低，游戏内插件种类丰富，能满足我个人的需求，反正就是挺好的</p>
+                <ul class="star_rating mt-4">
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+									<li><span><i class="fas fa-star-half-alt"></i></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-item">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="testi-img mb-4 mb-lg-0">
+                <img src="img/walker43710.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="testi-right">
+                <h4>Walker43710</h4>
+                <p><small>服务器玩家</small></p>
+
+                <p>这服务器还挺好，啥插件材质都不错，延迟还挺稳定，运行起来很流畅的，说到最后还是一句话，perfect.</p>
+                <ul class="star_rating mt-3">
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+									<li><span><i class="far fa-star"></i></span></li>
+                  <!-- <li class="disable"><span><i class="fas fa-star"></i></span></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-item">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="testi-img mb-4 mb-lg-0">
+                <img src="img/kaede.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="testi-right">
+                <h4>KaedeHiguchi010</h4>
+                <p><small>服务器老玩家</small></p>
+
+                <p><b>“服务器真好玩”</b></p>
+                <ul class="star_rating mt-3">
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+                  <li><span><i class="fas fa-star"></i></span></li>
+									<li><span><i class="fas fa-star"></i></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	<!--================ End Testimonial Area =================-->
+
+
+
+
+	<!--================ Start Portfolio Area =================-->
+	<section class="portfolio_area" id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title">
+						<p class="top_text">我们的图册<span></span></p>
+						<h2>查看我们服务器的截图</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="filters-content">
+				<div class="row portfolio-grid">
+					<div class="grid-sizer col-md-3 col-lg-3"></div>
+					<div class="col-lg-6 col-md-6 all following">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p1.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>小镇街角</a></h4>
+								<p>位于小镇地图角落处</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 all latest popular upcoming">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p4.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>主城</a></h4>
+								<p>使用Complementary Shaders拍摄</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 all latest following">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p2.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>NPC玩家</a></h4>
+								<p>位于小镇银行内</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-md-6 all latest upcoming">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p3.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>街景</a></h4>
+								<p>位于小镇中央附近</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 all popular">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p6.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>挂机温泉</a></h4>
+								<p>位于小镇中央</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 all popular latest following">
+						<div class="single_portfolio">
+							<img class="img-fluid w-100" src="img/portfolio/p5.png" alt="">
+							<div class="overlay"></div>
+							<div class="short_info">
+								<h4><a>生存世界</a></h4>
+								<p>使用Complementary Shaders拍摄</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Portfolio Area =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo2.png" alt="" style="border-radius: 20px;">
+							</a>
+							<div class="d-lg-block d-none">
+								<nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+									<div class="collapse navbar-collapse offset">
+										<ul class="nav navbar-nav menu_nav mx-auto">
+											<li class="nav-item"><a class="nav-link text-white" href="index.html">首页</a></li>
+											<li class="nav-item"><a class="nav-link text-white" href="about.html">关于我们</a></li>
+											<li class="nav-item"><a class="nav-link text-white" href="contact.html">联系我们</a></li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</div>
+						<div class="footer_social mt-lg-0 mt-4">
+							<a href="http://map.ericrao.icu/"><i class="fas fa-map-marked-alt"></i></a>
+							<a href="https://discord.gg/QKanqu9v6S/"><i class="fab fa-discord"></i></a>
+							<a href="https://docs.ericrao.icu/"><i class="fas fa-book"></i></a>
+							<a href="http://stats.ericrao.icu/"><i class="fas fa-poll"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+					Made With ❤️ in China<br>服务器创立于2021年8月13日<br>&copy;EricRao SMP 2022</p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+
+</html>
